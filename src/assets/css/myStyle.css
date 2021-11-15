@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&display=swap');
+
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --primary: #9599E2;
+    --secondary: #6AC2FA;
+    --success: #0067B3;
+    --warning: #B30000;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: var(--dark); */
+    /* display: grid;
+    place-items: center; */
+    background-image: radial-gradient( circle farthest-corner at 10% 50%, rgba(0,84,166,1) 0%, rgba(132,189,201,1) 90% );
+    min-height: 100%;
+    
+
+}
+/*COMPONENT TODO COUNTER*/
+.container-counter {
+    /* background-color: aqua;   */
+    /* display: grid;
+    place-items: center; */
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-top: 20px;
+    height: 100px;
+    /* width: 100%; */
+   
+
+}
+.container-counter--title {
+
+    /* dar brillo a una fuente */
+    margin: 0;
+    color: var(--white);
+    text-shadow: 0 0 30px #fff; 
+    padding:5px;
+
+}
+/*COMPONENT TODO LIST*/
+.container-todolist {
+    padding-top: 10px;
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+    color: var(--white);
+
+}
+
+.container-todolist--list {
+    height: 350px;
+    line-height: 1em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    padding:0;
+    width: 50%;
+  border: var(--secondary) solid;
+  border-radius: 8px;
+
+    /* background-color: yellow; */
+}
+/*COMPONENT  TODO ITEM*/
+.todoitem{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+   margin: 2%;
+}
+.todoitem--list-title{
+padding:10px;
+}
+.todoitem--list-text{
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 8px;
+    height: 50px;
+    padding-left:10px ;
+    padding-right: 10px;
+    width: 80%;
+    justify-content: center;
+}
+.todoitem--button-delete{
+    cursor: pointer;
+    background-color: var(--warning);
+    opacity: 0.6;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+/*COMPONENT SERACH*/
+.container-search{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
+    
+}
+.search{
+background-color: #8fc8ee;
+height: 40px;
+border-radius: 8px;
+font-size: 15px;
+border: none;
+width: 40%;  
+padding-left: 20px;
+padding-right: 20px;
+outline: none;
+color: var(--white);
+
+}
+
+.search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 0.5;
+}
+/*cambiar el margin color al hacer click al buscador*/
+.search:focus { 
+    outline: 2px solid;
+    /* hacer el contorno azul */
+    outline-color: #61dafa;
+ 
+}
+
+.searchIcon{
+    height: 30px;
+    cursor: pointer;
+    padding-left: 10px;
+    opacity: 0.3;
+}
+/* COMPONENT BUTTON CREATE  */
+.container-button-create{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.button-create{
+    width: 60px;
+    height: 60px;
+   background-color: var(--success);
+   opacity: 0.6;
+   border: none;
+   color: var(--white);
+   font-size: 30px;
+   border-radius: 50px;
+   text-shadow: 0 0 50px #fff;
+}
+
+.todoitem--list-title{
+    color: var(--white);
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 0 0.1em #F4AAB9;
+    opacity: 0.7;
+    margin: 0.5em;
+} 
+.active-todo{
+    color: aqua;
+  /* 1 margin 2 paddin*/
+  /* con ayuda del margin y sombra adicionas un marco*/
+    box-shadow:  #F4AAB9;
+    opacity: 0.7;
+    margin: 0.5em;
+}
+
+.active-todo-text{
+    color: aqua;
+  /* 1 margin 2 paddin*/
+  /* con ayuda del margin y sombra adicionas un marco*/
+    box-shadow:  #F4AAB9;
+    opacity: 0.7;
+    margin: 0.5em;
+
+      /*texto tachado*/
+  text-decoration: line-through;
+}
