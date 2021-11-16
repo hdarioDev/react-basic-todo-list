@@ -30,13 +30,19 @@ const todos = [
   }
 ]
 
-function App(props) {
+function App() {
+  //HOKS param
+  const [searchValue, setSearchValue] = React.useState('test')
+
   return (
     <React.Fragment>
 
       <TodoCounter />
 
-      <SearchTodo />
+      <SearchTodo
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
 
       <TodoList>
         {
