@@ -199,3 +199,10 @@ color: var(--white);
       /*texto tachado*/
   text-decoration: line-through;
 }
+
+/*RESPONSIVE DEIGNE*/
+@media screen and (max-width:525px){
+    .container-todolist--list{
+        width: 85%;
+    }
+}
